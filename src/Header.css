@@ -1,0 +1,30 @@
+header{
+    grid-area: header;
+    width: 85vw;
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    padding-right: 5%;
+}
+
+header h2 {
+    width: 30%;
+    display: flex;
+    margin: 15px 0;
+    padding-inline: 5px;
+    border-radius: 15px;
+    background-color: rgb(49, 45, 45);
+}
+
+
+header h2 input{
+    background-color: transparent;
+    color: rgb(110, 110, 110);
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+}
+
+header h2 img{
+    width: 42px;
+}

@@ -1,0 +1,35 @@
+.carousal{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: black;
+}
+
+.slide{
+    height: 60vh;
+    border-radius: 25px;
+    /* The image used */
+    background-image: url("assets/deadpool3.jpg");
+    background-position: right; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
+}
+
+.caption{
+    height: 100%;
+    width: 100%;
+    border: 25px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.998)45%, transparent  70%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: start;
+
+    margin-left: 50px;
+}
+
+.caption > *{
+    width: 50%;
+    margin: 0 0;
+}

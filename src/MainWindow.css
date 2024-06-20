@@ -1,0 +1,5 @@
+main{
+    grid-area: main;
+    height: 90vh;
+    max-width: 85vw;
+}
