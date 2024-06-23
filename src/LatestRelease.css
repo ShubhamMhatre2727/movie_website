@@ -1,0 +1,58 @@
+.latest-release{
+    display: grid;
+    grid-template-areas: "title title title" "backward section forward";
+}
+.latest-release h2{
+    grid-area: title;
+    padding: 0 25px;
+}
+.latest-release ul{
+    grid-area: section;
+    
+}
+.latest-release .backward{
+    grid-area: backward;
+    transform: translateX(25px) scaleX(3);
+    background: linear-gradient(270deg, transparent, black);
+}
+.latest-release .forward{
+    grid-area: forward;
+    transform: translateX(-25px) scaleX(3);
+    background: linear-gradient(90deg, transparent, black);
+}
+
+.latest-release button{
+    width: 25px;
+    border: none;
+    background-color: transparent;
+    opacity: 0;
+}
+
+.latest-release button:hover{
+    opacity: 1;
+}
+
+.latest-release ul{
+    list-style-type: none;
+    padding-top: 10px;
+    display: flex;
+    gap: 25px;
+    overflow-x: scroll;
+}
+
+.latest-release ul li{
+    min-width: 190px;
+}
+
+.latest-release ul li img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.latest-release ul li small{
+    font-size: 0.7rem;
+}
+
+.latest-release button{
+
+}
