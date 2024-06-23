@@ -1,8 +1,5 @@
-.carousal{
-}
-
 .slide{
-    transform: translatex(60px);
+    transform: translatex(10px);
     height:400px;
     
     background-position: right;
