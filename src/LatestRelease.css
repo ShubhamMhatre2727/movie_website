@@ -21,15 +21,21 @@
     background: linear-gradient(90deg, transparent, black);
 }
 
-.latest-release button{
+.latest-release div{
     width: 25px;
-    border: none;
     background-color: transparent;
     opacity: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
 }
 
-.latest-release button:hover{
+.latest-release div:hover{
     opacity: 1;
+}
+
+.latest-release div span{
+    transform: scaleY(8);
 }
 
 .latest-release ul{
@@ -38,6 +44,7 @@
     display: flex;
     gap: 25px;
     overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 .latest-release ul li{

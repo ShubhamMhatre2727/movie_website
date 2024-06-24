@@ -1,65 +1,99 @@
 import "./LatestRelease.css";
 
-export default function LatestRelease(){
-    const ul = document.querySelector("ul");
-    function backward(){
-        alert("backward")
-    }
-    function forward(){
-        alert("forward")
-    }
-    return(
-        <div className="latest-release">
-            <h2>Latest Release</h2>
-            <button className="backward" onClick={backward}>&lt;</button>
-            <ul>
-                <li>
-                    <img src="src\assets\latest release\ahsoka poster.jpg" alt="" />
-                    <h4>Ahsoka</h4>
-                    <small>⭐7.7 | Action, Adventure, Sci-Fi</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\bad boys poster.webp" alt="" />
-                    <h4>Bad Boys: Ride or Die</h4>
-                    <small>⭐7.2 | Action, Crime, Drama</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\civil war poster.webp" alt="" />
-                    <h4>Civil War</h4>
-                    <small>⭐7.0 | War, Action, Drama</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\furiosa poster.webp" alt="" />
-                    <h4>Furiosa</h4>
-                    <small>⭐7.6 | Action, Adventure, Drama</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\godzilla x k0ng poster.webp" alt="" />
-                    <h4>Godzilla X Kong:The New Empire</h4>
-                    <small>⭐7.2 | Action, Adventure, Drama</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\inside out 2 poster.webp" alt="" />
-                    <h4>Inside Out 2</h4>
-                    <small>⭐7.2 | Adventure, Animation</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\kung fu panda poster.webp" alt="" />
-                    <h4>Kung Fu Panda</h4>
-                    <small>⭐7.2 | Adventure, Animation</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\planet of apes poster.webp" alt="" />
-                    <h4>Kingdom of The Planet of the Apes</h4>
-                    <small>⭐7.4 | Action, Adventure, Drama</small>
-                </li>
-                <li>
-                    <img src="src\assets\latest release\the watchers poster.webp" alt="" />
-                    <h4>The Watchers</h4>
-                    <small>⭐7.2 | Action, Horror, Drama</small>
-                </li>
-            </ul>
-            <button className="forward" onClick={forward}>&gt;</button>
-        </div>
-    )
+export default function LatestRelease() {
+
+  const movies = [
+    {
+      title: "Ahsoka",
+      poster:"src/assets/latest release/ahsoka poster.jpg",
+      rating: 7.7,
+      genre: ["Action", "Adventure", "Sci-Fi"],
+    },
+    {
+      title: "Bad Boys: Ride or Die",
+      poster: "src/assets/latest release/bad boys poster.webp",
+      rating: 7.2,
+      genre: ["Action", "Crime", "Drama"],
+    },
+    {
+      title: "Civil War",
+      poster: "src/assets/latest release/civil war poster.webp",
+      rating: 7.0,
+      genre: ["War", "Action", "Drama"],
+    },
+    {
+      title: "Furiosa",
+      poster: "src/assets/latest release/furiosa poster.webp",
+      rating: 7.6,
+      genre: ["Action", "Adventure", "Drama"],
+    },
+    {
+      title: "Godzilla X Kong:The New Empire",
+      poster: "src/assets/latest release/godzilla x k0ng poster.webp",
+      rating: 7.2,
+      genre: ["Action", "Adventure", "Drama"],
+    },
+    {
+      title: "Inside Out 2",
+      poster: "src/assets/latest release/inside out 2 poster.webp",
+      rating: 7.2,
+      genre: ["Adventure", "Animation"],
+    },
+    {
+      title: "Kung Fu Panda",
+      poster: "src/assets/latest release/kung fu panda poster.webp",
+      rating: 7.2,
+      genre: ["Adventure", "Animation"],
+    },
+    {
+      title: "Kingdom of The Planet of the Apes",
+      poster: "src/assets/latest release/planet of apes poster.webp",
+      rating: 7.4,
+      genre: ["Action", "Adventure", "Drama"],
+    },
+    {
+      title: "The Watchers",
+      poster: "src/assets/latest release/the watchers poster.webp",
+      rating: 7.2,
+      genre: ["Action", "Horror", "Drama"],
+    },
+  ];
+
+  var i = 0;
+  var MAX_LENGHT = Math.floor(movies.length/2) * 190;
+  
+  const ul = document.querySelector(".latest-release ul");
+  function backward() {
+    i > 0 && (i = i - 190);
+    ul.scroll(i, 0);
+  }
+  function forward() {
+    i < MAX_LENGHT && (i += 190);
+    ul.scroll(i, 0);
+  }
+  return (
+    <div className="latest-release">
+      <h2>Latest Release</h2>
+      <div className="backward" onClick={backward}>
+        <span>&lt;</span>
+      </div>
+      <ul>
+        {movies.map((movie, index) => {
+          return (
+            <li>
+              <img
+                src={movie.poster}
+                alt=""
+              />
+              <h4>{movie.title}</h4>
+              <small>⭐{movie.rating} | {movie.genre.join(", ")}</small>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="forward" onClick={forward}>
+        <span>&gt;</span>
+      </div>
+    </div>
+  );
 }
