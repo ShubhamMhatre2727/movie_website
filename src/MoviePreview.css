@@ -1,0 +1,79 @@
+.preview{
+    color: black;    
+    background-image: url("src/assets/badboys4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.preview :nth-child(2){
+    background-color: black;
+}
+.details{
+    padding: 0 25px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    background: linear-gradient(0deg, black 0%, transparent 45%);
+}
+.details h1{
+    font-size: 4.5em;
+    padding: 0;
+    padding-bottom: 5px;
+}
+.details .small{
+    background: transparent;
+    color: rgb(181, 181, 181);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.607);
+}
+.details p{
+    margin: 0;
+    padding: 5px 0;
+    text-align: left;
+    width: 50%;
+    color: rgb(234, 234, 234);
+}
+
+.details > div{
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.details div :last-child{
+    background-color: transparent;
+}
+
+.details > div :first-child button{
+    width:150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(0,170,78);
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+
+    margin-right: 30px;
+}
+
+#watch-trailer{
+    background-color: rgb(110,110,110);
+}
+
+.details > div :last-child button{
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.6));
+    margin-left: 10px;
+}
